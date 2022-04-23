@@ -1,1 +1,3 @@
-require './app/people_controller.rb'
+$:.unshift(Dir.pwd)
+require 'app/controllers/people_controller'
+

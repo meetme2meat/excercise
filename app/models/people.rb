@@ -1,5 +1,5 @@
 require_relative './person'
-require_relative '../lib/parser/parser'
+require 'lib/parser/parser'
 class People
   class << self
     ## populate: load individual person from the io data.

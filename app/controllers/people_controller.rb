@@ -1,4 +1,4 @@
-require_relative './people'
+require_relative '../models/people'
 class PeopleController
   def initialize(params)
     @params = params
