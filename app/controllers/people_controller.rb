@@ -9,8 +9,7 @@ class PeopleController
       :csv,' $ ', '%d-%m-%Y')
 
     people += People.populate(params[:percent_format],
-        :csv , ' % ', '%Y-%m-%d')
-
+        :csv,' % ', '%Y-%m-%d')
 
     people.sort_by{ |p| p.send(params[:order]) }.collect(&:to_s)
   end

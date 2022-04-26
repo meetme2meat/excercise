@@ -6,10 +6,14 @@ class Parser
     "LA": "Los Angeles"
   } 
 
-  @@parser = {csv: CSVParser}
   ## #find: return the parser for the given. If not present return default
   def self.find(format=nil)
-    @@parser[format] || Default
+    case format
+    when :csv
+      return CSVParser
+    else
+      return Default
+    end
   end
 
 
